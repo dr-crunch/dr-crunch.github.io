@@ -24,7 +24,7 @@
 
 <style>
   :root {
-    /* ── Core ink & surfaces: warmer, brown-black (from deontological-differences) ── */
+    /* ── Core ink & surfaces ── */
     --ink: #0c0b09;
     --surface: #141210;
     --surface2: #1c1a17;
@@ -32,27 +32,27 @@
     --parchment-dim: #9e9887;
     --parchment-faint: #2a2720;
 
-    /* ── Purple: desaturated slate (was vivid #8b83e8) ── */
+    /* ── Purple: desaturated slate ── */
     --purple: #9098b0;
     --purple-dim: #303848;
     --purple-bg: #1e1f24;
 
-    /* ── Green: muted teal-green (was vivid #2fb882) ── */
+    /* ── Green: muted teal-green ── */
     --green: #5e9e9a;
     --green-dim: #2a3e3d;
     --green-bg: #1a1e20;
 
-    /* ── Regatta blue: new primary accent ── */
+    /* ── Regatta blue: primary accent ── */
     --regatta: #7faad4;
     --regatta-dim: #2a4060;
     --regatta-bg: #171e28;
 
-    /* ── Citron: warm straw, secondary accent (replaces gold in many roles) ── */
+    /* ── Citron: warm straw, secondary accent ── */
     --citron: #c8b87a;
     --citron-dim: #3a3420;
     --citron-bg: #1e1e20;
 
-    /* ── Terra, amber, blue: unchanged ── */
+    /* ── Terra, amber, blue ── */
     --terra: #d4643d;
     --terra-dim: #993d1d;
     --terra-bg: #1f1109;
@@ -63,20 +63,20 @@
     --blue-dim: #185fa5;
     --blue-bg: #0c1929;
 
-    /* ── Teal: new addition ── */
+    /* ── Teal ── */
     --teal: #2ab8c0;
     --teal-dim: #156e72;
     --teal-bg: #0a1e20;
 
-    /* ── Gold: retained for SVG legend / decorative glyphs only ── */
+    /* ── Gold: decorative glyphs only ── */
     --gold: #c9a84c;
     --star: #d4cfc0;
 
-    /* ── Rules: slightly stronger opacity than original ── */
+    /* ── Rules ── */
     --rule: rgba(232, 227, 212, 0.10);
     --rule-strong: rgba(232, 227, 212, 0.18);
 
-    /* ── Redundancy-awareness accent: amber-rose — unchanged ── */
+    /* ── Redundancy-awareness accent: amber-rose ── */
     --ra: #c97f5a;
     --ra-dim: #7a3e1f;
     --ra-bg: #1c0f08;
@@ -90,6 +90,131 @@
     --khaki: #a3b54a;
     --khaki-dim: #5a6622;
     --khaki-bg: #161a0a;
+
+    /* ════════════════════════════════════════════════════
+       GLAMOUR & GLEAM · Pantone 2026 palette additions
+       ════════════════════════════════════════════════════ */
+
+    /* Scarlet Smile 19-1558 TCX · deep crimson-red */
+    --scarlet: #c8253a;
+    --scarlet-dim: #7a1020;
+    --scarlet-bg: #1a080a;
+
+    /* Bordeaux 17-1710 TCX · muted mauve-plum */
+    --bordeaux: #8b5b70;
+    --bordeaux-dim: #4a2838;
+    --bordeaux-bg: #180d12;
+
+    /* Dragonfly 19-4826 TCX · steel teal-blue */
+    --dragonfly: #2e6e82;
+    --dragonfly-dim: #183e4a;
+    --dragonfly-bg: #0a1820;
+
+    /* Stretch Limo 19-4005 TCX · near-black charcoal */
+    --limo: #2e2e30;
+    --limo-dim: #1a1a1c;
+    --limo-bg: #0e0e10;
+
+    /* Graphite 20-0188 TPM · metallic olive-khaki */
+    --graphite: #8a8347;
+    --graphite-dim: #4a4820;
+    --graphite-bg: #181808;
+
+    /* Satin Slipper 20-0020 TPM · warm champagne */
+    --satin: #c8bfa8;
+    --satin-dim: #6e6858;
+    --satin-bg: #1e1c18;
+
+    /* Grape Frost 20-0070 TPM · dusty rose-pink */
+    --grape-frost: #c98a90;
+    --grape-frost-dim: #784048;
+    --grape-frost-bg: #1c0e10;
+
+    /* ════════════════════════════════════════════════════
+       2026 v1 PALETTE · cool blues & aquas
+       ════════════════════════════════════════════════════ */
+
+    /* Nantucket Breeze 14-4005 TCX · soft sky blue */
+    --nantucket: #a8c8e0;
+    --nantucket-dim: #4a7898;
+    --nantucket-bg: #101e28;
+
+    /* Cloud Dancer 11-4201 TCX · cool near-white */
+    --cloud: #eef0ec;
+    --cloud-dim: #909490;
+    --cloud-bg: #1c1e1c;
+
+    /* Alaskan Blue 15-4225 TCX · quiet mid-blue */
+    --alaskan: #4e8ab0;
+    --alaskan-dim: #285278;
+    --alaskan-bg: #0c1820;
+
+    /* Cosmic Sky 15-3909 TCX · violet-blue */
+    --cosmic: #8888b0;
+    --cosmic-dim: #404068;
+    --cosmic-bg: #10101e;
+
+    /* Aqua Gray 15-5205 TCX · sage green-grey */
+    --aqua-gray: #8aa898;
+    --aqua-gray-dim: #3e5848;
+    --aqua-gray-bg: #101810;
+
+    /* Pantone Regatta 18-4039 TCX · strong cobalt
+       NOTE: distinct from CSS --regatta (#7faad4, lighter) */
+    --cobalt: #2e5ba8;
+    --cobalt-dim: #183060;
+    --cobalt-bg: #080e1e;
+
+    /* Rinsing Rivulet 14-4912 TCX · bright aqua
+       Near-match to --teal (#2ab8c0); retained as named alias */
+    --rivulet: #38c8b8;
+    --rivulet-dim: #187868;
+    --rivulet-bg: #081e1a;
+
+    /* Dusky Citron 14-0827 TCX · warm straw-gold
+       Near-match to --citron (#c8b87a); retained as named alias */
+    --dusky-citron: #d4c06a;
+    --dusky-citron-dim: #7a6e28;
+    --dusky-citron-bg: #1c1a08;
+
+    /* ════════════════════════════════════════════════════
+       COMFORT ZONE PALETTE · warm neutrals & roses
+       ════════════════════════════════════════════════════ */
+
+    /* Shifting Sand 14-1210 TCX · warm linen beige */
+    --sand: #d4bea8;
+    --sand-dim: #7a6850;
+    --sand-bg: #1e1810;
+
+    /* Coral Haze 16-1329 TCX · muted coral-rose */
+    --coral: #c87870;
+    --coral-dim: #784038;
+    --coral-bg: #1c0e0c;
+
+    /* Mountain Trail 17-0807 TCX · warm taupe-brown */
+    --trail: #6e5e52;
+    --trail-dim: #3a3028;
+    --trail-bg: #141008;
+
+    /* Amberlight 14-1217 TCX · light golden straw */
+    --amberlight: #d4c090;
+    --amberlight-dim: #7a6840;
+    --amberlight-bg: #1e1a08;
+
+    /* Ashes of Roses 15-0703 TCX · cool grey-rose */
+    --ash-rose: #a8a098;
+    --ash-rose-dim: #585048;
+    --ash-rose-bg: #181610;
+
+    /* Woodrose 16-1806 TCX · dusty mauve-rose */
+    --woodrose: #a87880;
+    --woodrose-dim: #5e3840;
+    --woodrose-bg: #180c10;
+
+    /* Rose Brown 18-1512 TCX · deep rose-brown */
+    --rose-brown: #7e5858;
+    --rose-brown-dim: #422828;
+    --rose-brown-bg: #120808;
   }
 
   #starfield {
@@ -301,7 +426,6 @@
     opacity: 0.5;
   }
 
-  /* ── Alert strip: regatta scheme (was terra) ── */
   .alert-strip {
     background: var(--regatta-bg);
     border-bottom: 1px solid var(--regatta-dim);
@@ -357,7 +481,6 @@
 
   .btn:hover::before { opacity: 0.08; }
 
-  /* ── Civic Signal: bright grape ── */
   .btn-normie {
     background: var(--grape-bg);
     border-color: var(--grape-dim);
@@ -369,7 +492,6 @@
     box-shadow: 0 0 16px rgba(192, 132, 252, 0.30);
   }
 
-  /* ── Public Petition: dull khaki-lime ── */
   .btn-petition {
     background: var(--khaki-bg);
     border-color: var(--khaki-dim);
@@ -575,7 +697,7 @@
 
   .svg-container svg { display: block; max-width: 100%; height: auto; }
 
-  /* ─── RA CALLOUT PANEL ─── */
+  /* ─── RA CALLOUT PANEL · now Bordeaux scheme ─── */
   .ra-callout {
     position: relative;
     z-index: 1;
@@ -585,9 +707,9 @@
   }
 
   .ra-panel {
-    background: var(--ra-bg);
-    border: 1px solid var(--ra-dim);
-    border-top: 3px solid var(--ra);
+    background: var(--bordeaux-bg);
+    border: 1px solid var(--bordeaux-dim);
+    border-top: 3px solid var(--bordeaux);
     border-radius: 4px;
     padding: 28px 32px;
     display: grid;
@@ -601,7 +723,7 @@
     align-items: baseline;
     gap: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(201,127,90,0.15);
+    border-bottom: 1px solid rgba(139, 91, 112, 0.20);
     margin-bottom: 4px;
   }
 
@@ -610,8 +732,8 @@
     font-size: 9px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--ra);
-    opacity: 0.7;
+    color: var(--bordeaux);
+    opacity: 0.8;
   }
 
   .ra-panel-title {
@@ -621,21 +743,21 @@
     color: var(--parchment);
   }
 
-  .ra-panel-title em { font-style: italic; color: rgba(201,127,90,0.8); }
+  .ra-panel-title em { font-style: italic; color: rgba(139, 91, 112, 0.85); }
 
   .ra-node {
     padding: 16px 20px;
-    border: 1px solid rgba(201,127,90,0.2);
+    border: 1px solid rgba(139, 91, 112, 0.22);
     border-radius: 3px;
-    background: rgba(28,15,8,0.6);
+    background: rgba(24, 13, 18, 0.65);
     transition: background 0.2s, border-color 0.2s;
     text-decoration: none;
     display: block;
   }
 
   .ra-node:hover {
-    background: rgba(201,127,90,0.08);
-    border-color: var(--ra);
+    background: rgba(139, 91, 112, 0.10);
+    border-color: var(--bordeaux);
   }
 
   .ra-node-label {
@@ -643,9 +765,9 @@
     font-size: 9px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--ra);
+    color: var(--bordeaux);
     margin-bottom: 6px;
-    opacity: 0.7;
+    opacity: 0.75;
   }
 
   .ra-node-title {
@@ -667,7 +789,7 @@
   .ra-node-arrow {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
-    color: rgba(201,127,90,0.5);
+    color: rgba(139, 91, 112, 0.55);
     margin-top: 10px;
     letter-spacing: 0.05em;
   }
@@ -997,15 +1119,14 @@
           .node-gh text.t1 { fill:#7ab8e8; font-size:13px; font-weight:500; }
           .node-gh text.t2 { fill:#4a9fe0; font-size:11px; }
 
-          /* Redundancy-awareness cluster: amber-rose */
-          .node-ra rect { fill:#1c0f08; stroke:#7a3e1f; }
-          .node-ra text.t1 { fill:#d4906a; font-size:13px; font-weight:500; }
-          .node-ra text.t2 { fill:#7a3e1f; font-size:11px; }
+          /* Redundancy-awareness cluster: Bordeaux mauve-plum */
+          .node-ra rect { fill:#180d12; stroke:#4a2838; }
+          .node-ra text.t1 { fill:#b87898; font-size:13px; font-weight:500; }
+          .node-ra text.t2 { fill:#6a3850; font-size:11px; }
 
-          /* RA child pages: lighter variant */
-          .node-ra-child rect { fill:#1c0f08; stroke:#c97f5a; }
-          .node-ra-child text.t1 { fill:#e8a882; font-size:13px; font-weight:500; }
-          .node-ra-child text.t2 { fill:#c97f5a; font-size:11px; }
+          .node-ra-child rect { fill:#180d12; stroke:#8b5b70; }
+          .node-ra-child text.t1 { fill:#c890a8; font-size:13px; font-weight:500; }
+          .node-ra-child text.t2 { fill:#8b5b70; font-size:11px; }
 
           .node-nav rect { fill:#141210; stroke:#3a3630; }
           .node-nav text { fill:#6e6b62; font-size:11px; }
@@ -1020,7 +1141,7 @@
           svg g[data-href] rect { transition: all 0.15s; }
 
           .connector { stroke:#2a2820; stroke-width:1.5; fill:none; }
-          .connector-ra { stroke:#3a1f0f; stroke-width:1.5; fill:none; stroke-dasharray:4 3; }
+          .connector-ra { stroke:#3a1828; stroke-width:1.5; fill:none; stroke-dasharray:4 3; }
         </style>
       </defs>
 
@@ -1037,7 +1158,6 @@
         <text x="340" y="104" class="t2" text-anchor="middle" dominant-baseline="central">On Ramp · CC0</text>
       </g>
 
-      <!-- Hub connectors -->
       <line class="connector" x1="280" y1="118" x2="170" y2="178" marker-end="url(#arrow)"/>
       <line class="connector" x1="400" y1="118" x2="510" y2="178" marker-end="url(#arrow)"/>
       <line class="connector" x1="340" y1="118" x2="340" y2="268" marker-end="url(#arrow)"/>
@@ -1063,7 +1183,6 @@
         <text x="340" y="304" class="t2" text-anchor="middle" dominant-baseline="central">Constitutional indictment</text>
       </g>
 
-      <!-- Compendium label -->
       <text x="340" y="348" text-anchor="middle" class="section-label">— compendium entries —</text>
 
       <line class="connector" x1="200" y1="358" x2="140" y2="388" marker-end="url(#arrow)"/>
@@ -1083,7 +1202,6 @@
         <text x="540" y="424" class="t2" text-anchor="middle" dominant-baseline="central">Français · compendium</text>
       </g>
 
-      <!-- Drive label -->
       <text x="340" y="464" text-anchor="middle" class="section-label">— Google Drive archives —</text>
 
       <line class="connector" x1="220" y1="474" x2="160" y2="504" marker-end="url(#arrow)"/>
@@ -1103,10 +1221,8 @@
         <text x="520" y="540" class="t2" text-anchor="middle" dominant-baseline="central">226-page record · Google Drive</text>
       </g>
 
-      <!-- GitHub repos label -->
       <text x="340" y="600" text-anchor="middle" class="section-label">— GitHub repositories —</text>
 
-      <!-- ─── ROW 1 ─── -->
       <g class="node-gh" data-href="https://dr-crunch.github.io/nullification-loops" onclick="navigate(this)">
         <rect x="20" y="610" width="190" height="50" rx="8"/>
         <text x="115" y="628" class="t1" text-anchor="middle" dominant-baseline="central">nullification-loops</text>
@@ -1123,7 +1239,6 @@
         <text x="542" y="646" class="t2" text-anchor="middle" dominant-baseline="central">Memoranda &amp; Notices</text>
       </g>
 
-      <!-- ─── ROW 2 ─── -->
       <g class="node-gh" data-href="https://github.com/dr-wojak/public-relations" onclick="navigate(this)">
         <rect x="20" y="668" width="180" height="50" rx="8"/>
         <text x="110" y="686" class="t1" text-anchor="middle" dominant-baseline="central">public-relations</text>
@@ -1140,15 +1255,12 @@
         <text x="401" y="704" class="t2" text-anchor="middle" dominant-baseline="central">Opportunity costs</text>
       </g>
 
-      <!-- ════════════════════════════════════════════════════
-           REDUNDANCY-AWARENESS CLUSTER
-           ════════════════════════════════════════════════════ -->
+      <!-- ════ REDUNDANCY-AWARENESS CLUSTER · Bordeaux ════ -->
       <text x="340" y="742" text-anchor="middle" class="section-label">— redundancy-awareness · evidentiary cluster —</text>
 
       <rect x="14" y="752" width="652" height="192" rx="6"
-            fill="rgba(28,15,8,0.3)" stroke="#3a1f0f" stroke-width="1" stroke-dasharray="6 4"/>
+            fill="rgba(24,13,18,0.35)" stroke="#4a2838" stroke-width="1" stroke-dasharray="6 4"/>
 
-      <!-- RA hub node -->
       <g class="node-ra" data-href="https://dr-crunch.github.io/redundancy-awareness" onclick="navigate(this)">
         <rect x="220" y="764" width="240" height="50" rx="8"/>
         <text x="340" y="782" class="t1" text-anchor="middle" dominant-baseline="central">redundancy-awareness</text>
@@ -1157,7 +1269,6 @@
 
       <line class="connector-ra" x1="340" y1="814" x2="340" y2="860" marker-end="url(#arrow)"/>
 
-      <!-- ─── RA CHILD: PR Drive Folder ─── -->
       <g class="node-ra" data-href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" onclick="navigate(this)">
         <rect x="236" y="860" width="208" height="62" rx="8"/>
         <text x="340" y="878" class="t1" text-anchor="middle" dominant-baseline="central">PR Drive Folder</text>
@@ -1165,10 +1276,8 @@
         <text x="340" y="912" class="t2" text-anchor="middle" dominant-baseline="central">Documents archive</text>
       </g>
 
-      <!-- RA cluster ↔ parent graph connector -->
       <line class="connector-ra" x1="110" y1="718" x2="300" y2="764" marker-end="url(#arrow)"/>
 
-      <!-- Footer nav label -->
       <text x="340" y="958" text-anchor="middle" class="section-label">— footer navigation —</text>
 
       <g class="node-nav" data-href="https://github.com/dr-crunch/nullification-loops/tree/main/compendium/pieces-jointes#user-content-fn-interregnum-389c8ddbfafeae57e9b2a2084a2a0448" onclick="navigate(this)">
@@ -1203,14 +1312,13 @@
       <text x="273" y="1014" class="legend-text" dominant-baseline="central">Drive archives</text>
       <rect x="380" y="1008" width="12" height="12" rx="2" fill="#0c1929" stroke="#185fa5" stroke-width="0.5"/>
       <text x="398" y="1014" class="legend-text" dominant-baseline="central">GitHub repos</text>
-      <rect x="480" y="1008" width="12" height="12" rx="2" fill="#1c0f08" stroke="#c97f5a" stroke-width="0.5"/>
+      <rect x="480" y="1008" width="12" height="12" rx="2" fill="#180d12" stroke="#8b5b70" stroke-width="0.5"/>
       <text x="498" y="1014" class="legend-text" dominant-baseline="central">Redundancy-awareness</text>
-
     </svg>
   </div>
 </section>
 
-<!-- ─── RA CALLOUT PANEL ─── -->
+<!-- ─── RA CALLOUT PANEL · Bordeaux scheme ─── -->
 <div class="ra-callout">
   <div class="ra-panel">
     <div class="ra-panel-header">
