@@ -445,6 +445,119 @@ footer a:hover{color:var(--warm-amber);}
 .fade-in{opacity:0;transform:translateY(12px);animation:fadein 0.55s ease forwards;}
 @keyframes fadein{to{opacity:1;transform:translateY(0);}}
 .fd1{animation-delay:0.05s;} .fd2{animation-delay:0.12s;} .fd3{animation-delay:0.2s;} .fd4{animation-delay:0.28s;} .fd5{animation-delay:0.36s;}
+
+/* ── CALLOUT DOSSIER CARDS · adapted from nullification-loops pattern ── */
+.callout-section{
+  max-width:960px;margin:0 auto;padding:0 28px 56px;
+  position:relative;z-index:1;
+}
+.callout-section-head{
+  display:flex;align-items:baseline;gap:18px;
+  padding:16px 0 14px;
+  border-top:1px solid var(--rule-strong);
+  border-bottom:1px solid var(--rule);
+  margin-bottom:18px;
+}
+.callout-section-kicker{
+  font-family:'IBM Plex Mono',monospace;font-size:8.5px;
+  letter-spacing:0.24em;text-transform:uppercase;
+  color:var(--parchment-dim);white-space:nowrap;
+}
+.callout-section-title{
+  font-family:'Cinzel',serif;font-size:1.05rem;
+  letter-spacing:0.08em;color:var(--cloud);flex:1;
+}
+/* base card */
+.callout-card{
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+  background:linear-gradient(135deg,
+    rgba(28,22,8,0.65) 0%,
+    rgba(18,8,26,0.45) 100%
+  );
+  border:1px solid var(--rule);
+  border-left:3px solid var(--gold);
+  border-radius:5px;
+  padding:16px 22px;
+  margin-bottom:10px;
+  text-decoration:none;
+  color:var(--parchment);
+  transition:background 0.2s, border-left-color 0.2s, box-shadow 0.2s;
+  position:relative;overflow:hidden;
+}
+.callout-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(200,168,48,0.055) 0%,transparent 55%);
+  pointer-events:none;border-radius:5px;
+}
+.callout-card:hover{
+  background:linear-gradient(135deg,rgba(28,22,8,0.88) 0%,rgba(18,8,26,0.65) 100%);
+  border-left-color:var(--gold-lt);
+  box-shadow:0 0 28px rgba(200,168,48,0.07);
+}
+/* grape variant — legal / constitutional */
+.callout-card.grape-line{
+  border-left-color:var(--grape-lt);
+}
+.callout-card.grape-line::before{
+  background:linear-gradient(90deg,rgba(107,45,139,0.085) 0%,transparent 55%);
+}
+.callout-card.grape-line:hover{
+  border-left-color:var(--grape-lt);
+  box-shadow:0 0 28px rgba(107,45,139,0.1);
+}
+/* rivulet variant — semantic / archival */
+.callout-card.rivulet-line{
+  border-left-color:var(--rivulet);
+}
+.callout-card.rivulet-line::before{
+  background:linear-gradient(90deg,rgba(56,200,184,0.055) 0%,transparent 55%);
+}
+.callout-card.rivulet-line:hover{
+  border-left-color:var(--rivulet);
+  box-shadow:0 0 28px rgba(56,200,184,0.07);
+}
+/* citron variant — framework / EU */
+.callout-card.citron-line{
+  border-left-color:var(--citron);
+}
+.callout-card.citron-line::before{
+  background:linear-gradient(90deg,rgba(212,192,106,0.055) 0%,transparent 55%);
+}
+.callout-card.citron-line:hover{
+  border-left-color:var(--citron);
+  box-shadow:0 0 28px rgba(212,192,106,0.07);
+}
+.callout-card-inner{flex:1;min-width:0;}
+.callout-card-label{
+  font-family:'IBM Plex Mono',monospace;font-size:8px;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:5px;
+}
+.callout-card.grape-line .callout-card-label{color:var(--grape-lt);}
+.callout-card.rivulet-line .callout-card-label{color:var(--rivulet);}
+.callout-card.citron-line .callout-card-label{color:var(--citron);}
+.callout-card-title{
+  font-family:'Cinzel',serif;font-size:0.97rem;
+  letter-spacing:0.05em;color:var(--cloud);
+  margin-bottom:5px;line-height:1.32;
+}
+.callout-card-desc{
+  font-family:'EB Garamond',serif;font-style:italic;
+  font-size:0.88rem;color:var(--parchment-dim);
+  line-height:1.52;max-width:64ch;
+}
+.callout-card-arrow{
+  font-family:'IBM Plex Mono',monospace;font-size:9px;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--gold);white-space:nowrap;flex-shrink:0;
+}
+.callout-card.grape-line .callout-card-arrow{color:var(--grape-lt);}
+.callout-card.rivulet-line .callout-card-arrow{color:var(--rivulet);}
+.callout-card.citron-line .callout-card-arrow{color:var(--citron);}
+
+/* inline callout (within tab panels) */
+.tab-callout{margin:28px 0;}
+.tab-callout .callout-section-head{padding-top:0;border-top:none;margin-bottom:14px;}
 </style>
 </head>
 <body>
@@ -498,7 +611,7 @@ footer a:hover{color:var(--warm-amber);}
       <div class="dossier-ref">
         Ó · Brøek Meinhardt<br>
         <span style="color:var(--warm-amber)">@broekmeinhardt</span><br>
-        tactualpledger@gmail.com
+        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7a3b6b4a3a2b6bba7bbb2b3b0b2a597b0bab6bebbf9b4b8ba">[email&#160;protected]</a>
       </div>
     </div>
     <div style="position:relative;z-index:1;">
@@ -522,8 +635,65 @@ footer a:hover{color:var(--warm-amber);}
   </div>
 </div>
 
+<!-- CALLOUT DOSSIER CARDS -->
+<section class="callout-section fade-in fd5">
+
+  <div class="callout-section-head">
+    <span class="callout-section-kicker">Doiciméid Ghaolmhara</span>
+    <span class="callout-section-title">Cártaí Tagartha
+      <span style="font-family:'EB Garamond',serif;font-size:0.82em;font-weight:300;font-style:italic;color:var(--parchment-dim);letter-spacing:0.01em;"> · Reference Cards</span>
+    </span>
+  </div>
+
+  <a href="https://dr-crunch.github.io/nullification-loops/dossier.html" class="callout-card">
+    <div class="callout-card-inner">
+      <span class="callout-card-label">Taifead Iomlán Fianaise · Ocht Rannóg</span>
+      <div class="callout-card-title">Scátháin agus Splanc — Doisiéar Iomlán</div>
+      <div class="callout-card-desc">Forbhreathnú · An Lúb · Fianaise · Dlí · Gníomhaithe · Doiciméid · Cúig Raon · Teangacha</div>
+    </div>
+    <span class="callout-card-arrow">Oscail Doisiéar ↗</span>
+  </a>
+
+  <a href="https://dr-crunch.github.io/nullification-loops/tairiscint.html" class="callout-card">
+    <div class="callout-card-inner">
+      <span class="callout-card-label">Tairiscint Mheinhardt · Cáipéis Bhunúsach</span>
+      <div class="callout-card-title">Díotáil Bhunreachtúil, Clár Dlí, Saisine agus Creat um Leigheas</div>
+      <div class="callout-card-desc">Ráiteas Taifid <span style="color:var(--parchment-faint);font-style:normal;"> · </span> Statement of Record</div>
+    </div>
+    <span class="callout-card-arrow">Oscail ↗</span>
+  </a>
+
+  <a href="https://dr-wojak.github.io/legal/#structure" class="callout-card grape-line">
+    <div class="callout-card-inner">
+      <span class="callout-card-label">Reachtúil · Bunreachtúil · Dlíthiúil · Ullmhúchán Dlí</span>
+      <div class="callout-card-title">Stór Dlí — Mandamus, Sárú Rialachais &amp; Dualgais Eiticiúla</div>
+      <div class="callout-card-desc">Taifead fianaise 19 mbliana · Comhfhreagras Oireachtais · Nótaí Dlíthiúla · Abeyance Idirnáisiúnta</div>
+    </div>
+    <span class="callout-card-arrow">Oscail Stór ↗</span>
+  </a>
+
+  <a href="https://dr-crunch.github.io/redundancy-awareness/semantic-map.html" class="callout-card rivulet-line">
+    <div class="callout-card-inner">
+      <span class="callout-card-label">Forbhreathnú Cuimsitheach de réir Ábhair</span>
+      <div class="callout-card-title">Léarscáil Shéimeantach · Semantic Map</div>
+      <div class="callout-card-desc">Innéacs iomlán ábhair de réir raon téamach <span style="color:var(--parchment-faint);font-style:normal;"> · </span> Complete subject index by thematic scope</div>
+    </div>
+    <span class="callout-card-arrow">Oscail ↗</span>
+  </a>
+
+  <a href="https://dr-crunch.github.io/start-here/" class="callout-card citron-line">
+    <div class="callout-card-inner">
+      <span class="callout-card-label">Pointe Iontrála Aontaithe · Dlínsí &amp; Lucht Féachana Uile</span>
+      <div class="callout-card-title">Tosaigh Anseo · Start Here</div>
+      <div class="callout-card-desc">An tairseach chuig gach dlínse agus lucht féachana — the unified gateway across all jurisdictions</div>
+    </div>
+    <span class="callout-card-arrow">Isteach ↗</span>
+  </a>
+
+</section>
+
 <!-- TABS -->
-<div class="tabs-section" style="margin-top:48px;">
+<div class="tabs-section" style="margin-top:0;">
 
   <nav class="tabs-nav">
     <button class="tab-btn active" onclick="switchTab('context',this)">Comhthéacs</button>
@@ -572,6 +742,31 @@ footer a:hover{color:var(--warm-amber);}
       <div class="flow-arrow"><span>→</span><span class="flow-arrow-rel">discursive update</span></div>
       <div class="flow-node fn-rivulet"><div class="fn-label">New Specification</div><div class="fn-name">Sonrú Breise · Docket 001</div></div>
     </div>
+
+    <div class="tab-callout">
+      <div class="callout-section-head">
+        <span class="callout-section-kicker">Doiciméid Comhthéacs</span>
+        <span class="callout-section-title">Taifid Ghaolmhara
+          <span style="font-family:'EB Garamond',serif;font-size:0.82em;font-weight:300;font-style:italic;color:var(--parchment-dim);"> · Related Records</span>
+        </span>
+      </div>
+      <a href="https://dr-crunch.github.io/redundancy-awareness/" class="callout-card rivulet-line">
+        <div class="callout-card-inner">
+          <span class="callout-card-label">Feasacht Iomarcaíochta · 2006–2026</span>
+          <div class="callout-card-title">Taifead 19 mbliana de Rabhaidh O.R. agus Sárú Fiúchásach</div>
+          <div class="callout-card-desc">Gach foláireamh, gach freagra, gach tost — the full register of warnings issued and decisions deferred</div>
+        </div>
+        <span class="callout-card-arrow">Rochtain ↗</span>
+      </a>
+      <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences.html" class="callout-card">
+        <div class="callout-card-inner">
+          <span class="callout-card-label">Difríochtaí Deontolaíocha · Anailís Struchtúrtha</span>
+          <div class="callout-card-title">Deontological Differences — Cé Atá Freagrach?</div>
+          <div class="callout-card-desc">Léiriú ar na difríochtaí idir dualgas reachtúil, dualgas reachtach agus dualgas eiticiúil sa chás seo</div>
+        </div>
+        <span class="callout-card-arrow">Féach ↗</span>
+      </a>
+    </div>
   </div>
 
   <!-- TAB: ARGUMENT -->
@@ -602,6 +797,31 @@ footer a:hover{color:var(--warm-amber);}
       <p class="en">Each document had an immediate diplomatic purpose when created, but now each carries lasting scholarly and legal value. The Secretary-as-Archivist bears the living link between the immediate purpose of the office and the historical foundation that sustains continuity.</p>
       <p>Is í seo an tsamhail atá le forbairt: comhfhorbairt chomhuaineach idir taidhleoireacht agus cartlannaíocht, idir comhairle dlí agus doiciméadú eiticiúil, idir seirbhís phoiblí agus stair phoiblí. <span class="en">The model to be developed: simultaneous co-development between diplomacy and archiving, between legal counsel and ethical documentation, between public service and public history.</span></p>
       <p>Is dá bharr sin a éilítear anois samhail níos dinimiciúla de rialachas—samhail a aithníonn nach mbíonn gníomh i gcónaí mar thoradh ar fhios. <span class="en">A more dynamic model of governance is now required: one that recognises that action does not always follow from knowledge. Often, procedure itself is the instrument of evasion.</span></p>
+    </div>
+
+    <div class="tab-callout">
+      <div class="callout-section-head">
+        <span class="callout-section-kicker">Leanúint an Argóna</span>
+        <span class="callout-section-title">Cásanna Dlí &amp; Faillí
+          <span style="font-family:'EB Garamond',serif;font-size:0.82em;font-weight:300;font-style:italic;color:var(--parchment-dim);"> · Legal Cases &amp; Failure Modes</span>
+        </span>
+      </div>
+      <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html" class="callout-card grape-line">
+        <div class="callout-card-inner">
+          <span class="callout-card-label">Modhanna Faillí · Doiciméadaithe</span>
+          <div class="callout-card-title">Modhanna Faillí — Cé Mar a Theipeann ar Chórais Rialachais</div>
+          <div class="callout-card-desc">Anailís ar na modhanna ar theip ar an Stát aghaidh a thabhairt ar an Tionscnamh Meinhardt le 19 mbliana</div>
+        </div>
+        <span class="callout-card-arrow">Oscail ↗</span>
+      </a>
+      <a href="https://dr-crunch.github.io/nullification-loops/" class="callout-card">
+        <div class="callout-card-inner">
+          <span class="callout-card-label">Lúba Neamhniúcháin · Interregnum Nullificans 2006–2026</span>
+          <div class="callout-card-title">Nullification Loops — Curaclaim Mheasctha Mí-riaracháin</div>
+          <div class="callout-card-desc">An taifead iomlán ar thost institiúideach, feiniocracacht, agus lúba neamhniúcháin nós imeachta in Éirinn</div>
+        </div>
+        <span class="callout-card-arrow">Léigh ↗</span>
+      </a>
     </div>
   </div>
 
@@ -654,6 +874,31 @@ footer a:hover{color:var(--warm-amber);}
       <p>Is é bunús an éilimh ná go bhfuil an dualgas aire (duty of care) ina fheidhm dhinimiciúil: ní hamháin gur gá freagracht nuair atá eolas ar fáil, ach go bhfuil leibhéal an chúraim a theastaíonn cóimheárach le méid, nádúr agus tábhacht an ábhair atá i gceist.</p>
       <p class="en">The basis of the claim is that the duty of care is a dynamic function: not merely that accountability is required when knowledge is available, but that the level of care required is proportional to the scale, nature, and significance of the matter involved.</p>
     </div>
+
+    <div class="tab-callout">
+      <div class="callout-section-head">
+        <span class="callout-section-kicker">Iniúchadh &amp; Cartlann</span>
+        <span class="callout-section-title">Foinsí Príomhúla
+          <span style="font-family:'EB Garamond',serif;font-size:0.82em;font-weight:300;font-style:italic;color:var(--parchment-dim);"> · Primary Sources</span>
+        </span>
+      </div>
+      <a href="https://dr-crunch.github.io/redundancy-awareness/epistemological-audit.html" class="callout-card rivulet-line">
+        <div class="callout-card-inner">
+          <span class="callout-card-label">Iniúchadh Eipistéimeolaíoch · Taifead Fianaise 2006–2026</span>
+          <div class="callout-card-title">Rochtain Iniúchta — Epistemological Audit</div>
+          <div class="callout-card-desc">Taifead eipistéimeolaíoch fianaise ón mbliain 2006 go 2026 · Full epistemic record of knowledge received and not acted upon</div>
+        </div>
+        <span class="callout-card-arrow">Rochtain ↗</span>
+      </a>
+      <a href="https://dr-crunch.github.io/redundancy-awareness/semantic-map#tairiscint" class="callout-card citron-line">
+        <div class="callout-card-inner">
+          <span class="callout-card-label">Iontráil Ábhair · Sárú Fiúchásach</span>
+          <div class="callout-card-title">Dualgas Réasúnachta — An Oibleagáid Bhunreachtúil</div>
+          <div class="callout-card-desc">An oibleagáid bhunreachtúil freagra réasúnach a thabhairt · the constitutional obligation to furnish a reasoned response</div>
+        </div>
+        <span class="callout-card-arrow">Oscail ↗</span>
+      </a>
+    </div>
   </div>
 
   <!-- TAB: DISCLOSURE -->
@@ -678,6 +923,31 @@ footer a:hover{color:var(--warm-amber);}
       <span style="font-size:0.75em;color:var(--parchment-dim);" class="en">In the future, when scrutinising where the State stands regarding accountability and welcome of critical information, this material will be a clear indicator of what was noticed, understood.</span>
     </div>
 
+    <div class="tab-callout" style="margin-top:20px;">
+      <div class="callout-section-head">
+        <span class="callout-section-kicker">Scaipeadh &amp; Nochtadh</span>
+        <span class="callout-section-title">Trédhearcacht Phoiblí
+          <span style="font-family:'EB Garamond',serif;font-size:0.82em;font-weight:300;font-style:italic;color:var(--parchment-dim);"> · Public Transparency</span>
+        </span>
+      </div>
+      <a href="https://dr-wojak.github.io/legal/" class="callout-card grape-line">
+        <div class="callout-card-inner">
+          <span class="callout-card-label">Stór Dlí · Comhaid Cúirte &amp; Gearáin Fhoirmiúla</span>
+          <div class="callout-card-title">Stór Dlí Mheinhardt — An Taifead Dlí Iomlán</div>
+          <div class="callout-card-desc">Gearáin Ard-Chúirte · Oibleagáidí Idirnáisiúnta · Clár Comhairleach Consalach · Forálacha Calafoirt Shábháilte</div>
+        </div>
+        <span class="callout-card-arrow">Oscail Stór ↗</span>
+      </a>
+      <a href="https://dr-crunch.github.io/sitemap" class="callout-card citron-line">
+        <div class="callout-card-inner">
+          <span class="callout-card-label">Léarscáil Shuímh · Iniúchadh Crónaeolaíoch</span>
+          <div class="callout-card-title">Léarscáil Suímh — Mapa an Chorpais Iomlán</div>
+          <div class="callout-card-desc">Iniúchadh crónaeolaíoch ar mhaolú aireachta agus feidhmeannaigh · A chronological audit of ministerial and executive deflection</div>
+        </div>
+        <span class="callout-card-arrow">Féach ↗</span>
+      </a>
+    </div>
+
     <div class="dossier-card" style="margin-top:28px;padding:24px 28px;">
       <div class="section-label">Postscript · Contents Disclosed To</div>
       <div class="prose-block" style="font-size:15px;">
@@ -690,7 +960,7 @@ footer a:hover{color:var(--warm-amber);}
         </div>
         <div style="text-align:right;">
           <div class="sig-handle sig-detail">@broekmeinhardt</div>
-          <div class="sig-detail">tactualpledger@gmail.comdiv>
+          <div class="sig-detail"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cebaafadbabbafa2bea2abaaa9abbc8ea9a3afa7a2e0ada1a3aaa7b8">[email&#160;protected]</a>>
         </div>
       </div>
     </div>
@@ -703,127 +973,49 @@ footer a:hover{color:var(--warm-amber);}
     <div class="contact-section">
       <div class="contact-section-head"><span class="head-icon">📰</span>Media and Press</div>
       <div class="contact-grid">
-        <div class="contact-card"><div class="contact-name">Catherine Bourke</div><div class="contact-role">Journalist, Independent.ie</div><a class="contact-email" href="mailto:cbourke@independent.ie">cbourke@independent.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Fergal Bowers</div><div class="contact-role">Health Correspondent, RTÉ News</div><a class="contact-email" href="mailto:fergal.bowers@rte.ie">fergal.bowers@rte.ie</a></div>
-        <div class="contact-card"><div class="contact-name">RTÉ Investigations Unit</div><div class="contact-role">RTÉ Investigations</div><a class="contact-email" href="mailto:investigations@rte.ie">investigations@rte.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Investigations Desk</div><div class="contact-role">The Irish Times</div><a class="contact-email" href="mailto:investigations@irishtimes.com">investigations@irishtimes.com</a></div>
-        <div class="contact-card"><div class="contact-name">Editorial Team</div><div class="contact-role">TheJournal.ie</div><a class="contact-email" href="mailto:contact@thejournal.ie">contact@thejournal.ie</a></div>
+        <div class="contact-card"><div class="contact-name">Catherine Bourke</div><div class="contact-role">Journalist, Independent.ie</div><a class="contact-email" href="/cdn-cgi/l/email-protection#3754555842455c52775e59535247525953525943195e52"><span class="__cf_email__" data-cfemail="395a5b564c4b525c7950575d5c495c575d5c574d17505c">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Fergal Bowers</div><div class="contact-role">Health Correspondent, RTÉ News</div><a class="contact-email" href="/cdn-cgi/l/email-protection#fe989b8c999f92d09c91899b8c8dbe8c8a9bd0979b"><span class="__cf_email__" data-cfemail="bcdad9cedbddd092ded3cbd9cecffccec8d992d5d9">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">RTÉ Investigations Unit</div><div class="contact-role">RTÉ Investigations</div><a class="contact-email" href="/cdn-cgi/l/email-protection#0e6760786b7d7a67696f7a6761607d4e7c7a6b20676b"><span class="__cf_email__" data-cfemail="5f3631293a2c2b36383e2b3630312c1f2d2b3a71363a">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Investigations Desk</div><div class="contact-role">The Irish Times</div><a class="contact-email" href="/cdn-cgi/l/email-protection#741d1a021107001d1315001d1b1a07341d061d071c001d1911075a171b19"><span class="__cf_email__" data-cfemail="c8a1a6beadbbbca1afa9bca1a7a6bb88a1baa1bba0bca1a5adbbe6aba7a5">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Editorial Team</div><div class="contact-role">TheJournal.ie</div><a class="contact-email" href="/cdn-cgi/l/email-protection#ccafa3a2b8adafb88cb8a4a9a6a3b9bea2ada0e2a5a9"><span class="__cf_email__" data-cfemail="ccafa3a2b8adafb88cb8a4a9a6a3b9bea2ada0e2a5a9">[email&#160;protected]</span></a></div>
       </div>
     </div>
 
     <div class="contact-section">
       <div class="contact-section-head"><span class="head-icon">⚖️</span>Legal and Civil Rights</div>
       <div class="contact-grid">
-        <div class="contact-card"><div class="contact-name">Law Society of Ireland</div><div class="contact-role">General Enquiries</div><a class="contact-email" href="mailto:general@lawsociety.ie">general@lawsociety.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Law Society Gazette</div><div class="contact-role">Editorial Team</div><a class="contact-email" href="mailto:gazette@lawsociety.ie">gazette@lawsociety.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Mark Hallissey</div><div class="contact-role">Law Society of Ireland</div><a class="contact-email" href="mailto:m.hallissey@lawsociety.ie">m.hallissey@lawsociety.ie</a></div>
-        <div class="contact-card"><div class="contact-name">ICCL</div><div class="contact-role">Irish Council for Civil Liberties</div><a class="contact-email" href="mailto:info@iccl.ie">info@iccl.ie</a></div>
-        <div class="contact-card"><div class="contact-name">FLAC</div><div class="contact-role">Free Legal Advice Centres</div><a class="contact-email" href="mailto:info@flac.ie">info@flac.ie</a></div>
+        <div class="contact-card"><div class="contact-name">Law Society of Ireland</div><div class="contact-role">General Enquiries</div><a class="contact-email" href="/cdn-cgi/l/email-protection#ccaba9a2a9beada08ca0adbbbfa3afa5a9b8b5e2a5a9"><span class="__cf_email__" data-cfemail="4f282a212a3d2e230f232e383c202c262a3b3661262a">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Law Society Gazette</div><div class="contact-role">Editorial Team</div><a class="contact-email" href="/cdn-cgi/l/email-protection#4225233827363627022e2335312d212b27363b6c2b27"><span class="__cf_email__" data-cfemail="c7a0a6bda2b3b3a287aba6b0b4a8a4aea2b3bee9aea2">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Mark Hallissey</div><div class="contact-role">Law Society of Ireland</div><a class="contact-email" href="/cdn-cgi/l/email-protection#90fdbef8f1fcfcf9e3e3f5e9d0fcf1e7e3fff3f9f5e4e9bef9f5"><span class="__cf_email__" data-cfemail="8be6a5e3eae7e7e2f8f8eef2cbe7eafcf8e4e8e2eefff2a5e2ee">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">ICCL</div><div class="contact-role">Irish Council for Civil Liberties</div><a class="contact-email" href="/cdn-cgi/l/email-protection#a6cfc8c0c9e6cfc5c5ca88cfc3"><span class="__cf_email__" data-cfemail="9af3f4fcf5daf3f9f9f6b4f3ff">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">FLAC</div><div class="contact-role">Free Legal Advice Centres</div><a class="contact-email" href="/cdn-cgi/l/email-protection#3f565159507f59535e5c11565a"><span class="__cf_email__" data-cfemail="89e0e7efe6c9efe5e8eaa7e0ec">[email&#160;protected]</span></a></div>
       </div>
     </div>
 
     <div class="contact-section">
       <div class="contact-section-head"><span class="head-icon">🎓</span>Academic Institutions</div>
       <div class="contact-grid">
-        <div class="contact-card"><div class="contact-name">Geary Institute · UCD</div><div class="contact-role">Public Policy</div><a class="contact-email" href="mailto:geary@ucd.ie">geary@ucd.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Dean of Law · UCD</div><div class="contact-role">School of Law</div><a class="contact-email" href="mailto:deanoflaw@ucd.ie">deanoflaw@ucd.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Policy Institute · TCD</div><div class="contact-role">Trinity College Dublin</div><a class="contact-email" href="mailto:policyinstitute@tcd.ie">policyinstitute@tcd.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Oran Doyle</div><div class="contact-role">Professor, TCD Law</div><a class="contact-email" href="mailto:oran.doyle@tcd.ie">oran.doyle@tcd.ie</a></div>
-        <div class="contact-card"><div class="contact-name">David Fennelly</div><div class="contact-role">Lecturer, TCD Law</div><a class="contact-email" href="mailto:david.fennelly@tcd.ie">david.fennelly@tcd.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Ailbhe O'Neill</div><div class="contact-role">Lecturer, TCD Law</div><a class="contact-email" href="mailto:ailbhe.oneill@tcd.ie">ailbhe.oneill@tcd.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Martin Hogg</div><div class="contact-role">Professor, University of Galway</div><a class="contact-email" href="mailto:martin.hogg@universityofgalway.ie">martin.hogg@universityofgalway.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Donncha O'Connell</div><div class="contact-role">Professor, University of Galway</div><a class="contact-email" href="mailto:donncha.oconnell@universityofgalway.ie">donncha.oconnell@universityofgalway.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Siobhán Mullally</div><div class="contact-role">Professor, University of Galway</div><a class="contact-email" href="mailto:siobhan.mullally@universityofgalway.ie">siobhan.mullally@universityofgalway.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Ray Murphy</div><div class="contact-role">Professor, University of Galway</div><a class="contact-email" href="mailto:ray.murphy@universityofgalway.ie">ray.murphy@universityofgalway.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Michael Poustie</div><div class="contact-role">Professor, UCC Law</div><a class="contact-email" href="mailto:m.poustie@ucc.ie">m.poustie@ucc.ie</a></div>
+        <div class="contact-card"><div class="contact-name">Geary Institute · UCD</div><div class="contact-role">Public Policy</div><a class="contact-email" href="/cdn-cgi/l/email-protection#a0c7c5c1d2d9e0d5c3c48ec9c5"><span class="__cf_email__" data-cfemail="f99e9c988b80b98c9a9dd7909c">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Dean of Law · UCD</div><div class="contact-role">School of Law</div><a class="contact-email" href="/cdn-cgi/l/email-protection#a5c1c0c4cbcac3c9c4d2e5d0c6c18bccc0"><span class="__cf_email__" data-cfemail="f29697939c9d949e9385b2879196dc9b97">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Policy Institute · TCD</div><div class="contact-role">Trinity College Dublin</div><a class="contact-email" href="/cdn-cgi/l/email-protection#5d2d3231343e2434332e2934292829381d293e39733438"><span class="__cf_email__" data-cfemail="adddc2c1c4ced4c4c3ded9c4d9d8d9c8edd9cec983c4c8">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Oran Doyle</div><div class="contact-role">Professor, TCD Law</div><a class="contact-email" href="/cdn-cgi/l/email-protection#caa5b8aba4e4aea5b3a6af8abea9aee4a3af"><span class="__cf_email__" data-cfemail="e689948788c882899f8a83a6928582c88f83">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">David Fennelly</div><div class="contact-role">Lecturer, TCD Law</div><a class="contact-email" href="/cdn-cgi/l/email-protection#afcbced9c6cb81c9cac1c1cac3c3d6efdbcccb81c6ca"><span class="__cf_email__" data-cfemail="7115100718155f17141f1f141d1d08310512155f1814">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Ailbhe O'Neill</div><div class="contact-role">Lecturer, TCD Law</div><a class="contact-email" href="/cdn-cgi/l/email-protection#47262e2b252f22692829222e2b2b07332423692e22"><span class="__cf_email__" data-cfemail="dabbb3b6b8b2bff4b5b4bfb3b6b69aaeb9bef4b3bf">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Martin Hogg</div><div class="contact-role">Professor, University of Galway</div><a class="contact-email" href="/cdn-cgi/l/email-protection#d0bdb1a2a4b9befeb8bfb7b790a5beb9a6b5a2a3b9a4a9bfb6b7b1bca7b1a9feb9b5"><span class="__cf_email__" data-cfemail="94f9f5e6e0fdfabafcfbf3f3d4e1fafde2f1e6e7fde0edfbf2f3f5f8e3f5edbafdf1">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Donncha O'Connell</div><div class="contact-role">Professor, University of Galway</div><a class="contact-email" href="/cdn-cgi/l/email-protection#8eeae1e0e0ede6efa0e1ede1e0e0ebe2e2cefbe0e7f8ebfcfde7faf7e1e8e9efe2f9eff7a0e7eb"><span class="__cf_email__" data-cfemail="6c080302020f040d42030f0302020900002c1902051a091e1f051815030a0b0d001b0d15420509">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Siobhán Mullally</div><div class="contact-role">Professor, University of Galway</div><a class="contact-email" href="/cdn-cgi/l/email-protection#1c6f75737e747d7232716970707d7070655c6972756a796e6f756865737a7b7d706b7d65327579"><span class="__cf_email__" data-cfemail="b7c4ded8d5dfd6d999dac2dbdbd6dbdbcef7c2d9dec1d2c5c4dec3ced8d1d0d6dbc0d6ce99ded2">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Ray Murphy</div><div class="contact-role">Professor, University of Galway</div><a class="contact-email" href="/cdn-cgi/l/email-protection#84f6e5fdaae9f1f6f4ecfdc4f1eaedf2e1f6f7edf0fdebe2e3e5e8f3e5fdaaede1"><span class="__cf_email__" data-cfemail="b6c4d7cf98dbc3c4c6decff6c3d8dfc0d3c4c5dfc2cfd9d0d1d7dac1d7cf98dfd3">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Michael Poustie</div><div class="contact-role">Professor, UCC Law</div><a class="contact-email" href="/cdn-cgi/l/email-protection#87eaa9f7e8f2f4f3eee2c7f2e4e4a9eee2"><span class="__cf_email__" data-cfemail="deb3f0aeb1abadaab7bb9eabbdbdf0b7bb">[email&#160;protected]</span></a></div>
       </div>
     </div>
 
     <div class="contact-section">
       <div class="contact-section-head"><span class="head-icon">🏛️</span>Government and Oversight Bodies</div>
       <div class="contact-grid">
-        <div class="contact-card"><div class="contact-name">SIPO</div><div class="contact-role">Standards in Public Office Commission</div><a class="contact-email" href="mailto:info@sipo.ie">info@sipo.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Office of the Ombudsman</div><div class="contact-role">Ireland</div><a class="contact-email" href="mailto:ombudsman@ombudsman.gov.ie">ombudsman@ombudsman.gov.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Petitions Committee</div><div class="contact-role">Houses of the Oireachtas</div><a class="contact-email" href="mailto:petitions@oireachtas.ie">petitions@oireachtas.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Science Foundation Ireland</div><div class="contact-role">SFI</div><a class="contact-email" href="mailto:info@sfi.ie">info@sfi.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Irish Research Council</div><div class="contact-role">Research Policy</div><a class="contact-email" href="mailto:contact@research.ie">contact@research.ie</a></div>
-        <div class="contact-card"><div class="contact-name">NREC</div><div class="contact-role">National Office for Research Ethics</div><a class="contact-email" href="mailto:nationaloffice@nrec.ie">nationaloffice@nrec.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Office of the Press Ombudsman</div><div class="contact-role">Ireland</div><a class="contact-email" href="mailto:info@pressombudsman.ie">info@pressombudsman.ie</a></div>
-      </div>
-    </div>
-
-    <div class="contact-section">
-      <div class="contact-section-head"><span class="head-icon">🌍</span>International Organisations</div>
-      <div class="contact-grid">
-        <div class="contact-card"><div class="contact-name">European Ombudsman</div><div class="contact-role">EU</div><a class="contact-email" href="mailto:eo@ombudsman.europa.eu">eo@ombudsman.europa.eu</a></div>
-        <div class="contact-card"><div class="contact-name">OLAF</div><div class="contact-role">European Anti-Fraud Office</div><a class="contact-email" href="mailto:olaf-courrier@ec.europa.eu">olaf-courrier@ec.europa.eu</a></div>
-        <div class="contact-card"><div class="contact-name">Transparency International</div><div class="contact-role">Global</div><a class="contact-email" href="mailto:information@transparency.org">information@transparency.org</a></div>
-        <div class="contact-card"><div class="contact-name">Transparency International IE</div><div class="contact-role">Ireland</div><a class="contact-email" href="mailto:info@transparency.ie">info@transparency.ie</a></div>
-        <div class="contact-card"><div class="contact-name">Open Government Partnership</div><div class="contact-role">Support Team</div><a class="contact-email" href="mailto:support@opengovpartnership.org">support@opengovpartnership.org</a></div>
-        <div class="contact-card"><div class="contact-name">Open Society Foundations</div><div class="contact-role">General Enquiries</div><a class="contact-email" href="mailto:information@opensocietyfoundations.org">information@opensocietyfoundations.org</a></div>
-        <div class="contact-card"><div class="contact-name">EIPA</div><div class="contact-role">European Institute of Public Administration</div><a class="contact-email" href="mailto:info@eipa.eu">info@eipa.eu</a></div>
-        <div class="contact-card"><div class="contact-name">EU Commission Reform</div><div class="contact-role">European Commission</div><a class="contact-email" href="mailto:reform-contact@ec.europa.eu">reform-contact@ec.europa.eu</a></div>
-      </div>
-    </div>
-  </div>
-
-</div><!-- /tabs-section -->
-
-<footer>
-  <div class="f-left">Tionscnamh Meinhardt · Docket 001 · Aibreán 2026 · CC0</div>
-  <div class="f-links">
-    <a href="https://dr-crunch.github.io/redundancy-awareness/deontological-differences.html" >Deontological Differences</a>
-    <a href="https://dr-crunch.github.io/redundancy-awareness/ontology-relations.html" >Ontology Relations</a>
-    <a href="https://dr-crunch.github.io/redundancy-awareness/failure-modes.html" >Failure Modes</a>
-    <a href="https://dr-wojak.github.io/legal/" >Legal</a>
-    <a href="https://dr-crunch.github.io/nullification-loops/" >Nullification Loops</a>
-  </div>
-</footer>
-
-</div><!-- /page-wrap -->
-
-<script>
-/* ── STARFIELD ── */
-(function(){
-  const canvas=document.getElementById('starfield');
-  const ctx=canvas.getContext('2d');
-  let W,H,stars=[];
-  function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
-  function init(){
-    stars=[];
-    for(let i=0;i<220;i++){
-      stars.push({
-        x:Math.random()*W,y:Math.random()*H,
-        r:Math.random()*1.1+0.2,
-        a:Math.random()*0.6+0.08,
-        sp:Math.random()*0.008+0.002,
-        phase:Math.random()*Math.PI*2
-      });
-    }
-  }
-  function draw(t){
-    ctx.clearRect(0,0,W,H);
-    stars.forEach(s=>{
-      const alpha=s.a*(0.6+0.4*Math.sin(s.phase+t*s.sp*60));
-      ctx.beginPath();
-      ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(240,237,232,${alpha})`;
-      ctx.fill();
-    });
-  }
-  let last=0;
-  function loop(ts){draw((ts-last)/1000+last/1000);requestAnimationFrame(loop);}
-  window.addEventListener('resize',()=>{resize();init();});
-  resize();init();requestAnimationFrame(loop);
-})();
-
-/* ── TABS ── */
-function switchTab(id,btn){
-  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  btn.classList.add('active');
-}
-</script>
-</body>
-</html>
+        <div class="contact-card"><div class="contact-name">SIPO</div><div class="contact-role">Standards in Public Office Commission</div><a class="contact-email" href="/cdn-cgi/l/email-protection#3950575f56794a50495617505c"><span class="__cf_email__" data-cfemail="573e39313817243e2738793e32">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Office of the Ombudsman</div><div class="contact-role">Ireland</div><a class="contact-email" href="/cdn-cgi/l/email-protection#553a383720312638343b153a383720312638343b7b323a237b3c30"><span class="__cf_email__" data-cfemail="204f4d425544534d414e604f4d425544534d414e0e474f560e4945">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Petitions Committee</div><div class="contact-role">Houses of the Oireachtas</div><a class="contact-email" href="/cdn-cgi/l/email-protection#542431203d203d3b3a27143b3d263135373c2035277a3d31"><span class="__cf_email__" data-cfemail="ddadb8a9b4a9b4b2b3ae9db2b4afb8bcbeb5a9bcaef3b4b8">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Science Foundation Ireland</div><div class="contact-role">SFI</div><a class="contact-email" href="/cdn-cgi/l/email-protection#620b0c040d2211040b4c0b07"><span class="__cf_email__" data-cfemail="0d64636b624d7e6b64236468">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Irish Research Council</div><div class="contact-role">Research Policy</div><a class="contact-email" href="/cdn-cgi/l/email-protection#86e5e9e8f2e7e5f2c6f4e3f5e3e7f4e5eea8efe3"><span class="__cf_email__" data-cfemail="1b7874756f7a786f5b697e687e7a69787335727e">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">NREC</div><div class="contact-role">National Office for Research Ethics</div><a class="contact-email" href="/cdn-cgi/l/email-protection#e78986938e8889868b8881818e8482a789958284c98e82"><span class="__cf_email__" data-cfemail="036d62776a6c6d626f6c65656a6066436d7166602d6a66">[email&#160;protected]</span></a></div>
+        <div class="contact-card"><div class="contact-name">Office of the Press Ombudsman</div><div class="contact-role">Ireland</div><a class="contact-email" href="/cdn-cgi/l/email-protection#026b6c646d4272706771716d6f607766716f636c2c6b67"><span class="__cf_email__" data-cfemail="3950575f5679494b5c4a4a56545b4c5d4a54585717505c">[email&#160;protected
