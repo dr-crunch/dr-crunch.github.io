@@ -111,22 +111,22 @@ body::after{
 .top-bar-links a{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--parchment-dim);text-decoration:none;transition:color 0.15s;}
 .top-bar-links a:hover{color:var(--parchment);}
 
-/* ── HERO HEADER ── */
-.hero{
+/* ── aegis HEADER ── */
+.aegis{
   padding:72px 28px 52px;
   max-width:960px;margin:0 auto;
   border-bottom:1px solid var(--rule);
   display:grid;grid-template-columns:1fr auto;gap:36px;align-items:start;
 }
-@media(max-width:640px){.hero{grid-template-columns:1fr;}}
-.hero-body{}
+@media(max-width:640px){.aegis{grid-template-columns:1fr;}}
+.aegis-body{}
 .eyebrow{
   font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
   color:var(--warm-amber);margin-bottom:20px;
   display:flex;align-items:center;gap:10px;
 }
 .eyebrow::after{content:'';flex:1;height:1px;background:var(--warm-amber);opacity:0.25;max-width:180px;}
-.hero-title{
+.aegis-title{
   font-family:'Cinzel',serif;font-weight:500;
   font-size:clamp(30px,4.8vw,58px);
   line-height:1.05;letter-spacing:0.03em;
@@ -134,12 +134,12 @@ body::after{
   text-shadow:0 0 50px rgba(200,120,42,0.35), 0 0 100px rgba(200,120,42,0.12);
   margin-bottom:10px;
 }
-.hero-sub{
+.aegis-sub{
   font-family:'Cormorant Garamond',serif;font-size:clamp(14px,1.8vw,19px);
   font-weight:300;font-style:italic;
   color:var(--parchment-dim);margin-bottom:24px;
 }
-.hero-lede{
+.aegis-lede{
   font-family:'EB Garamond',serif;font-size:16px;
   color:var(--parchment);max-width:640px;line-height:1.8;
   border-left:2px solid var(--warm-amber);
@@ -156,14 +156,14 @@ body::after{
 .badge-cosmic{color:var(--cosmic);border-color:var(--cosmic-dim);background:var(--cosmic-bg);}
 .badge-rivulet{color:var(--rivulet);border-color:var(--rivulet-dim);background:var(--rivulet-bg);}
 
-.hero-crest{
+.aegis-crest{
   width:160px;height:160px;flex-shrink:0;
   border-radius:8px;overflow:hidden;
   border:1px solid rgba(200,120,42,0.28);
   box-shadow:0 0 40px rgba(200,120,42,0.12),0 0 80px rgba(200,120,42,0.05);
   animation:cresthover 6s ease-in-out infinite;
 }
-.hero-crest img{width:100%;height:100%;object-fit:cover;display:block;}
+.aegis-crest img{width:100%;height:100%;object-fit:cover;display:block;}
 @keyframes cresthover{0%,100%{box-shadow:0 0 40px rgba(200,120,42,0.12),0 0 80px rgba(200,120,42,0.05);}50%{box-shadow:0 0 60px rgba(200,120,42,0.22),0 0 120px rgba(200,120,42,0.10);}}
 
 /* ── PARCHMENT DOSSIER CARD ── */
@@ -577,13 +577,13 @@ footer a:hover{color:var(--warm-amber);}
   </div>
 </div>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-body">
+<!-- AEGIS -->
+<header class="aegis">
+  <div class="aegis-body">
     <div class="eyebrow fade-in fd1">Tionscnamh Mheinhardt · Docket 001 · Aibreán 2026</div>
-    <h1 class="hero-title fade-in fd2">Sonrú Breise</h1>
-    <div class="hero-sub fade-in fd3">Supplementary Specification · Complaint Lodgement · Dáil Éireann</div>
-    <div class="hero-lede fade-in fd4 en">
+    <h1 class="aegis-title fade-in fd2">Sonrú Breise</h1>
+    <div class="aegis-sub fade-in fd3">Supplementary Specification · Complaint Lodgement · Dáil Éireann</div>
+    <div class="aegis-lede fade-in fd4 en">
       A matter not born of grievance, but of duty. A vacancy—not of power, but of remit. A question unclaimed by any arm of the State, yet too grave to leave unanswered.
     </div>
     <div class="badge-row fade-in fd5">
@@ -593,7 +593,7 @@ footer a:hover{color:var(--warm-amber);}
       <span class="badge badge-rivulet">Seanad 2020</span>
     </div>
   </div>
-  <div class="hero-crest fade-in fd3">
+  <div class="aegis-crest fade-in fd3">
     <img src="pigeon-moon-yarn.png" alt="Meinhardt Initiative crest" />
   </div>
 </header>
