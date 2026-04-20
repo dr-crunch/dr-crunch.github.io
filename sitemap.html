@@ -6,7 +6,7 @@
 <title>Civic Signal · Meinhardt Initiative · 2006–2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Cormorant:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Cormorant:wght@300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500;700&display=swap" rel="stylesheet">
 
 <meta property="og:title" content="Civic Signal · Saisine Logique · Interregnum Nullificans 2006–2026" />
 <meta property="og:description" content="Pre-litigation public evidentiary record on the 19-year administrative non-decision by the Irish State under the Meinhardt Initiative. EU Council Presidency deadline: 1 July 2026." />
@@ -947,8 +947,365 @@
     .machol-line { width: 40px; height: 3px; min-height: auto; }
     .ra-panel { grid-template-columns: 1fr; }
   }
+
+  /* ══════════════════════════════════════════════════════════
+     TAIRISCINT MHEINHARDT · Constitutional Indictment block
+     Expressed in v2.55 grammar — native --sherwood-* tokens.
+     Cinzel restored (now imported). Grape: v2.55 canonical.
+  ══════════════════════════════════════════════════════════ */
+
+  /* Tairiscint wrapper — scoped below RA callout */
+  .tairiscint-section {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 32px 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .tairiscint-block {
+    background: linear-gradient(
+      135deg,
+      rgba(26,122,72,0.14) 0%,
+      rgba(8,26,16,0.90) 50%,
+      rgba(107,45,139,0.10) 100%
+    );
+    border: 1px solid rgba(56,200,120,0.25);
+    border-top: 3px solid var(--sherwood-lt);
+    border-radius: 6px;
+    padding: 36px 32px;
+    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tairiscint-block::before {
+    content: '⬡';
+    position: absolute;
+    right: 28px;
+    top: 16px;
+    font-size: 120px;
+    color: rgba(26,122,72,0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .tairiscint-eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--sherwood-lt);
+    margin-bottom: 12px;
+  }
+
+  .tairiscint-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: clamp(20px, 3vw, 36px);
+    color: var(--cloud-dancer);
+    line-height: 1.15;
+    margin-bottom: 8px;
+    text-shadow: 0 0 30px rgba(56,200,120,0.2);
+  }
+
+  .tairiscint-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(14px,1.8vw,18px);
+    font-style: italic;
+    color: var(--sherwood-lt);
+    margin-bottom: 20px;
+  }
+
+  .tairiscint-body {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--parchment);
+    max-width: 680px;
+    margin-bottom: 20px;
+  }
+
+  .tairiscint-charges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tairiscint-charge {
+    padding: 12px 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(56,200,120,0.2);
+    background: rgba(26,122,72,0.08);
+  }
+
+  .tairiscint-charge-n {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    color: var(--sherwood-lt);
+    margin-bottom: 3px;
+    letter-spacing: 0.1em;
+  }
+
+  .tairiscint-charge-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 13px;
+    color: var(--parchment-dim);
+    line-height: 1.45;
+  }
+
+  .tairiscint-cta-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .tairiscint-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .tb-primary {
+    background: var(--sherwood);
+    border: 1px solid var(--sherwood-lt);
+    color: var(--cloud-dancer);
+  }
+  .tb-primary:hover {
+    background: var(--sherwood-lt);
+    color: var(--ink);
+    box-shadow: 0 0 18px rgba(56,200,120,0.3);
+  }
+
+  .tb-secondary {
+    background: transparent;
+    border: 1px solid rgba(56,200,120,0.3);
+    color: var(--sherwood-lt);
+  }
+  .tb-secondary:hover {
+    border-color: var(--sherwood-lt);
+    box-shadow: 0 0 10px rgba(56,200,120,0.15);
+  }
 </style>
-</head>
+
+<!-- ══════════════════════════════════════════════════════════════
+     COLOUR GRAMMAR v2.55 AUGMENTATION
+     Merges the Meinhardt design-system master into the sitemap.
+     Additive cascade: sitemap's Civic Signal grape (--cs-grape)
+     preserved. v2.55 canonical tokens added / overridden below.
+     Source: colour-palette-master-2-55.html · April 2026
+══════════════════════════════════════════════════════════════ -->
+<style>
+:root {
+
+  /* ── v2.55 ink / surface (aligns corpus-wide) ── */
+  --ink:             #0a0910;
+  --surface:         #141018;
+  --surface2:        #1c1820;
+  --surface3:        #221e2a;
+  --rule:            rgba(200,180,230,0.09);
+  --rule-strong:     rgba(200,180,230,0.16);
+  --parchment:       #e8e3d4;
+  --parchment-dim:   #9e9887;
+  --parchment-faint: #38303e;
+
+  /* ── SHERWOOD · forest green · indictment / Tairiscint register ── */
+  --sherwood:        #1a7a48;
+  --sherwood-lt:     #38c878;
+  --sherwood-dim:    #0a3820;
+  --sherwood-bg:     #081a10;
+
+  /* ── GRAPE · v2.55 portal purple (canonical) ──
+     Sitemap's bright Civic Signal grape preserved as --cs-grape  */
+  --cs-grape:        #c084fc;
+  --cs-grape-dim:    #6d28d9;
+  --cs-grape-bg:     #1a0a2e;
+  --grape:           #6b2d8b;
+  --grape-lt:        #9b58c8;
+  --grape-dim:       #3a1050;
+  --grape-bg:        #12081a;
+
+  /* ── GOLD ── */
+  --gold:            #c8a830;
+  --gold-lt:         #e8c850;
+  --gold-dim:        #7a6218;
+  --gold-bg:         #1a1608;
+
+  /* ── RIVULET · aqua-teal (canonical) ── */
+  --rivulet:         #38c8b8;
+  --rivulet-dim:     #187868;
+  --rivulet-bg:      #081e1a;
+
+  /* ── CITRON (v2.55 canonical: #d4c06a not #c8b87a) ── */
+  --citron:          #d4c06a;
+  --citron-dim:      #7a6e28;
+  --citron-bg:       #1c1a08;
+
+  /* ── SCARLET ── */
+  --scarlet:         #c8253a;
+  --scarlet-lt:      #e84060;
+  --scarlet-dim:     #7a1020;
+  --scarlet-bg:      #1a080a;
+
+  /* ── BORDEAUX (v2.55: #b87898 not #8b5b70) ── */
+  --bordeaux:        #b87898;
+  --bordeaux-dim:    #4a2838;
+  --bordeaux-bg:     #180d12;
+
+  /* ── DRAGONFLY (v2.55: #5ab0c8 not #2e6e82) ── */
+  --dragonfly:       #5ab0c8;
+  --dragonfly-dim:   #183e4a;
+  --dragonfly-bg:    #0a1820;
+
+  /* ── COSMIC · analytical register ── */
+  --cosmic:          #9898c8;
+  --cosmic-lt:       #b8b8e0;
+  --cosmic-dim:      #404068;
+  --cosmic-bg:       #10101e;
+  --cosmic-lift:     #18182a;
+  --cosmic-crest:    #20203a;
+
+  /* ── GRAPHITE (v2.55: #a8a040 not #8a8347) ── */
+  --graphite:        #a8a040;
+  --graphite-dim:    #4a4820;
+  --graphite-bg:     #181808;
+
+  /* ── NANTUCKET (v2.55: #7ab8d8 not #a8c8e0) ── */
+  --nantucket:       #7ab8d8;
+  --nantucket-dim:   #2a5878;
+  --nantucket-bg:    #0a1820;
+
+  /* ── REGATTA (v2.55 canonical: #3c5a9a not #7faad4)
+     Sitemap's lighter accent kept as --regatta-pale          ── */
+  --regatta-pale:    #7faad4;
+  --regatta:         #3c5a9a;
+  --regatta-lt:      #6080c8;
+  --regatta-dim:     #1e2e58;
+  --regatta-bg:      #080e20;
+
+  /* ── CORAL ── */
+  --coral:           #c87870;
+  --coral-dim:       #784038;
+  --coral-bg:        #1c0e0c;
+
+  /* ── SATIN ── */
+  --satin:           #c8bfa8;
+  --satin-dim:       #6e6858;
+  --satin-bg:        #1e1c18;
+
+  /* ── SANDSTONE · warm amber-orange · Needs register ── */
+  --sandstone:       #d19162;
+  --sandstone-lt:    #f0a050;
+  --sandstone-dim:   #7a4020;
+  --sandstone-bg:    #1e0c06;
+
+  /* ── ARDENT · nacre midtone · warm teal-sage · v2.50 ── */
+  --ardent:          #72b89a;
+  --ardent-lt:       #a4d4bc;
+  --ardent-dim:      #2a5040;
+  --ardent-bg:       #091810;
+
+  /* ── ABALONE · liminal threshold · v2.42 ── */
+  --abalone:         #9888a8;
+  --abalone-lt:      #c0b8c8;
+  --abalone-dim:     #4a3858;
+  --abalone-bg:      #120e18;
+
+  /* ── PERPLEXITY · muted forest-grey · v2.42 ── */
+  --perplexity:      #525d52;
+  --perplexity-dim:  #2a302a;
+  --perplexity-bg:   #0e120e;
+
+  /* ── MINT COFFEE · pale sage ── */
+  --mint-coffee:     #deeed1;
+  --mint-coffee-dim: #78a080;
+  --mint-coffee-bg:  #0e1c10;
+
+  /* ── WOODROSE ── */
+  --woodrose:        #b07080;
+  --woodrose-dim:    #502838;
+  --woodrose-bg:     #180c10;
+
+  /* ── MOUNTAIN ── */
+  --mountain:        #8a7868;
+  --mountain-lt:     #b0a090;
+  --mountain-dim:    #4a3828;
+  --mountain-bg:     #181008;
+
+  /* ── STRETCH LIMO · near-black charcoal ── */
+  --stretch-limo:    #28283a;
+  --stretch-limo-dim:#181828;
+  --stretch-limo-bg: #080810;
+
+  /* ── CLOUD DANCER · luminous near-white ── */
+  --cloud-dancer:    #f0eee8;
+  --cloud-dancer-dim:#c8c4b8;
+  --cloud-dancer-bg: #1e1c18;
+
+  /* ── AQUA GRAY ── */
+  --aqua-gray:       #a0b0a0;
+  --aqua-gray-dim:   #4a5848;
+  --aqua-gray-bg:    #101810;
+
+  /* ── NACRE — augmented ink register ── */
+  --N-ink:           var(--stretch-limo);
+  --N-ink-grape:     var(--grape-bg);
+  --N-ink-cosmic:    var(--cosmic-bg);
+
+  /* ── NACRE — paper-print document layer ── */
+  --usquebaugh:      #ffe5d0;
+  --aqua-vitae:      #edfff8;
+  --willow:          #d5e9db;
+  --glaze:           #edffff;
+  --quire:           #fff6ff;
+  --deckle:          #dbccd7;
+  --deckle-dim:      #c0acc1;
+  --laitance:        #fefcfe;
+
+  /* ── ABALONE THEME ── */
+  --AB-surface:      #0e0c15;
+  --AB-surface2:     #15101e;
+  --AB-rule:         rgba(192,172,193,0.10);
+  --AB-rule-strong:  rgba(192,172,193,0.18);
+
+  /* ── SEMANTIC TOKENS · v2.55 ── */
+  --S-demonstrated:  var(--rivulet);
+  --S-structure:     var(--citron);
+  --S-needs:         var(--sandstone-lt);
+  --S-blocking:      var(--scarlet);
+  --S-narrative:     var(--bordeaux);
+  --S-legal:         var(--dragonfly);
+  --S-analytical:    var(--cosmic);
+  --S-neutral:       var(--satin);
+  --S-portal:        var(--grape-lt);
+  --S-ambient:       var(--cloud-dancer);
+  --S-domain:        var(--regatta);
+  --S-liminal:       var(--abalone-lt);
+  --S-earth:         var(--aqua-gray);
+  --S-resolved:      var(--laitance);
+  --S-perplexity:    var(--perplexity);
+  --S-syzygy:        var(--quire);
+  --S-synthesis:     var(--aqua-vitae);
+  --S-dyadic:        var(--deckle);
+  --S-bridge:        var(--willow);
+  --S-ardent:        var(--ardent);
+}
+
+/* ── Civic Signal button: re-bound to --cs-grape after grape override ── */
+.btn-civil-signal {
+  background: var(--cs-grape-bg) !important;
+  border-color: var(--cs-grape-dim) !important;
+  color: var(--cs-grape) !important;
+}
+.btn-civil-signal:hover { border-color: var(--cs-grape) !important; }
+</style>
 <body>
 
 <canvas id="starfield"></canvas>
@@ -1349,6 +1706,31 @@
       <div class="ra-node-body">OWL 2 DL formalisation of the dissemination record. Five channels — legal, EU, academic, civic, media — each carrying a distinct institutional obligation on receipt.</div>
       <div class="ra-node-arrow">→ /redundancy-awareness/deontological-differences</div>
     </a>
+  </div>
+</div>
+
+<!-- ─── TAIRISCINT MHEINHARDT ─── -->
+<div class="tairiscint-section">
+  <div class="tairiscint-block" id="tairiscint">
+    <div class="tairiscint-eyebrow">Tairiscint Mheinhardt v5 · Constitutional Indictment</div>
+    <div class="tairiscint-title">Tairiscint Mheinhardt</div>
+    <div class="tairiscint-subtitle"><em>Statement of Record · Saisine · Framework for Remedy · April 2026</em></div>
+    <div class="tairiscint-body">
+      The <em>Tairiscint</em> is the Meinhardt Initiative's master constitutional statement: a formal indictment of nineteen years of unperformed statutory obligation, framed in legal register, addressed simultaneously to the Irish Ombudsman, the High Court, and the European institutions. It is not a complaint but a <em>saisine</em>—a jurisdictional seizure. What follows is the charge architecture in summary form; the full document is held in the Drive and the Nullification Loops repository.
+    </div>
+    <div class="tairiscint-charges">
+      <div class="tairiscint-charge"><div class="tairiscint-charge-n">Charge 1 · Statutory</div><div class="tairiscint-charge-title">Unperformed obligation under Ministers &amp; Secretaries Act 1924. No determination issued in nineteen years.</div></div>
+      <div class="tairiscint-charge"><div class="tairiscint-charge-n">Charge 2 · Constitutional</div><div class="tairiscint-charge-title">Art.15.10 Bunreacht — petition mechanism nullified at source by JCPP total institutional silence.</div></div>
+      <div class="tairiscint-charge"><div class="tairiscint-charge-n">Charge 3 · Fiduciary</div><div class="tairiscint-charge-title">Information fiduciary breach — Balkin model. State holds asymmetric access; obligation to act is voided.</div></div>
+      <div class="tairiscint-charge"><div class="tairiscint-charge-n">Charge 4 · EU Treaty</div><div class="tairiscint-charge-title">Art.4(3) TEU Member State failure. Art.41 CFR right to good administration. Art.227 TFEU PETI.</div></div>
+      <div class="tairiscint-charge"><div class="tairiscint-charge-n">Charge 5 · Misfeasance</div><div class="tairiscint-charge-title">Named officeholders post-notification. Gunn Letter (Charge 8 of record) — McGrath Commissioner non-response.</div></div>
+      <div class="tairiscint-charge"><div class="tairiscint-charge-n">Charge 6 · Dual-Use</div><div class="tairiscint-charge-title">EU Reg. 2021/821 / 428/2009 Annex I, Category 4. DFA and DETE: competent and co-responsible authorities. No security assessment on record.</div></div>
+    </div>
+    <div class="tairiscint-cta-row">
+      <a class="tairiscint-btn tb-primary" href="https://dr-crunch.github.io/nullification-loops/tairiscint.html" target="_blank">Open Tairiscint →</a>
+      <a class="tairiscint-btn tb-secondary" href="https://dr-crunch.github.io/nullification-loops/dossier.html" target="_blank">Full Dossier</a>
+      <a class="tairiscint-btn tb-secondary" href="https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g" target="_blank">Drive Repository</a>
+    </div>
   </div>
 </div>
 
