@@ -19,7 +19,7 @@
 |**Acknowledged?**|Yes — verbally by Taoiseach Bertie Ahern (2006); Minister for Foreign Affairs Micheál Martin (2009)|
 |**Evaluated?**|No|
 |**Determined?**|No|
-|**Duration of non-determination**|**19 years** (2006–2026)|
+|**Duration of non-determination**|**20 years** (2006–2026)|
 |**Governments spanned**|Five|
 |**Taoisigh spanned**|Six|
 
@@ -91,7 +91,7 @@ SUBMISSION
 Under Council Regulation (EC) No. 428/2009 and subsequently under Regulation (EU) 2021/821:
 
 - **Designated competent authority:** Department of Foreign Affairs (DFA)
-- **Confirmed:** Oireachtas debate, 19 January 2022 — DFA stated it "is the National Competent Authority in respect of Regulation (EU) 2021/821"
+- **Confirmed:** Oireachtas debate,  January 2022 — DFA stated it "is the National Competent Authority in respect of Regulation (EU) 2021/821"
 - **Performance under designation (2006–2024):** Zero evaluations. Zero statutory determinations. Public contact channels non-functional. Contact details not provided despite formal requests.
 
 ### 2.2 — The Transfer (2023–2024)
@@ -113,7 +113,7 @@ Despite losing the competent authority designation, DFA retains:
 - Strategic policy ownership of Ireland's international relations dimension of export controls
 - The institutional memory — and physical custody — of correspondence received 2006–2024
 
-**This creates an unresolved custodial question:** The 19-year record of unprocessed submissions was generated under DFA's watch. Upon transfer to DETE, no public mechanism exists to confirm that record was disclosed to, or reviewed by, the incoming competent authority. If it was not, the transfer itself constitutes a further governance breach — a hand-off without discharge.
+**This creates an unresolved custodial question:** The -year record of unprocessed submissions was generated under DFA's watch. Upon transfer to DETE, no public mechanism exists to confirm that record was disclosed to, or reviewed by, the incoming competent authority. If it was not, the transfer itself constitutes a further governance breach — a hand-off without discharge.
 
 ### 2.4 — The DFA/DoD Nexus
 
@@ -139,13 +139,13 @@ The DFA-Defence link is not merely historical; it is structurally current:
 |Obligation|Status|
 |---|---|
 |Member State designates competent authority (Art. 9)|Formally complied with — DFA (2009–2024), then DETE (2024–present)|
-|Competent authority evaluates submissions with dual-use characteristics|**Not performed — 19 years**|
+|Competent authority evaluates submissions with dual-use characteristics|**Not performed — 20 years**|
 |Catch-all provision: controls on items not explicitly listed if security risk (Art. 4)|Not engaged|
 |Annual reporting to Commission|Status unverified|
 
 **Note:** Annex I, Category 4 (Computers), subsection 4.E.1 ('Software') covers O.R. methodologies under dual-use classification. The designation is held; the function is vacant.
 
-**Upcoming evaluation window:** The Commission is required to conduct a full evaluation of Regulation 2021/821 between **10 September 2026** and **10 September 2028**. A 19-year Member State competent authority vacancy is precisely the class of compliance failure that evaluation is designed to surface. The matter will enter the evaluation record regardless of resolution.
+**Upcoming evaluation window:** The Commission is required to conduct a full evaluation of Regulation 2021/821 between **10 September 2026** and **10 September 2028**. A 20-year Member State competent authority vacancy is precisely the class of compliance failure that evaluation is designed to surface. The matter will enter the evaluation record regardless of resolution.
 
 ### 3.2 — Data Sovereignty / EU-U.S. Data Privacy Framework
 
@@ -165,7 +165,7 @@ The "Silence Veto" — systematic refusal to metabolise lawful input — constit
 
 | Article     | Right                                                                                      | Breach                                                          |
 | ----------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-| **Art. 41** | Right to good administration — affairs handled impartially, fairly, within reasonable time | 19-year non-determination; contact channels non-functional      |
+| **Art. 41** | Right to good administration — affairs handled impartially, fairly, within reasonable time | 20-year non-determination; contact channels non-functional      |
 | **Art. 47** | Right to effective remedy                                                                  | Section 8(3) "unreviewable" determination; rebuttals suppressed |
 
 ---
@@ -198,8 +198,8 @@ In that capacity, Ireland will chair Council proceedings on:
 
 |Council agenda item|Ireland's documented condition|
 |---|---|
-|**Rule of law and democratic accountability**|Operates a "Silence Veto" constituting 19-year constitutional contumacy|
-|**Dual-use technology controls**|19-year competent authority vacancy under the primary dual-use instrument|
+|**Rule of law and democratic accountability**|Operates a "Silence Veto" constituting 20-year constitutional contumacy|
+|**Dual-use technology controls**|20-year competent authority vacancy under the primary dual-use instrument|
 |**Civil protection coordination**|O.R. crisis governance submissions unprocessed since 2006|
 |**Data protection and privacy rights**|Lead DPC regulator without O.R.-based analytic infrastructure|
 |**Fundamental rights implementation**|Section 8(3) procedures incompatible with Charter Arts. 41 & 47|
